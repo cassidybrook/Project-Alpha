@@ -1,0 +1,70 @@
+// Draw line:
+e.Graphics.DrawLine(myPen, x1, y1, x2, y2);
+
+// Draw circle:
+e.Graphics.DrawEllipse(myPen, x, y, width, height);
+
+// Draw rectangle:
+e.Graphics.DrawRectangle(myPen, x1, y2, width, height);
+
+// Draw arc:
+e.Graphics.DrawArc(myPen, x, y, width, height, startAngle, sweepAngle);
+
+// Draw pie:
+e.Graphics.DrawPie(myPen, x, y, width, height, startAngle, sweepAngle);
+
+// Draw polygon:
+private void DrawPolygon(int[] polyArrayX, int[] polyArrayY, 
+          int polyPointsNum, Pen myPen, PaintEventArgs e)
+{
+    Point[] pts = new Point[polyPointsNum];
+    for (int b = 0; b < polyPointsNum; b++)
+    {
+        pts[b] = new Point(polyArrayX[b], polyArrayY[b]);
+    }
+        e.Graphics.DrawPolygon(myPen, pts);
+}
+
+// Draw bezier:
+e.Graphics.DrawBezier(myPen, pt1, pt2, pt3, pt4);
+
+// Draw string:
+e.Graphics.DrawString(drawString, drawFont, myBrushDrawText, x, y);
+
+// Create the global variables:
+Pen myPen = new Pen(Color.Black, 1);
+Font drawFont = new Font(“Courier New”, 10, FontStyle.Bold);
+SolidBrush myBrushDrawText = new SolidBrush(Color.Red);
+
+// The initialization function of the drawing tools:
+private void InitDrawingTools(PaintEventArgs e)
+{
+    e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+    myPen.DashStyle = DashStyle.Solid;
+    myPen.Color = Color.Cyan;
+    myPen.Width = 3;
+    myBrushDrawText.Color = Color.Cyan;
+}
+
+// On a Paint event of a panel control call the initialization function – InitDrawingTools.
+
+private void pDrawingArea_Paint(object sender, PaintEventArgs e)
+{
+    InitDrawingTools(e);    ………
+
+// Now call the functions of the figures by setting the correct parameters.
+
+// Example:
+// Line:
+
+x1 = 200;
+y1 = 0;
+x2 = 200;
+y2 = 400;
+e.Graphics.DrawLine(myPen, x1, y1, x2, y2);
+
+// Polygon:
+
+px1 = 40;
+py1 = 40;
+px2 = px1 + 80;
