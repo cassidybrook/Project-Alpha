@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace sr08
+{
+    internal class Program
+    {
+        static void SR8()
+        {
+            int num;
+            string input1 = "";
+
+            while (!int.TryParse(input1, out num))
+            {
+                Console.WriteLine("Input num");
+                input1 = Console.ReadLine();
+            }
+
+            if (num < 0)
+            {
+                Console.WriteLine("number negative");
+            }
+            if (num > 0)
+            {
+                Console.WriteLine("number positive");
+            }
+            if (num == 0)
+            {
+                Console.WriteLine("num is neither positive nor negative");
+            }
+        }
+        static void Main(string[] args)
+        {
+            SR8();
+            Console.WriteLine("Press any key to close program");
+            Console.ReadKey();
+
+        }
+    }
+}
