@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TEST
+{
+    class Program
+    {
+        static string input;
+        static void SR7()
+        {
+            char answer1;
+            char answer2;
+            char answer3;
+            string input1 = "";
+            string input2 = "";
+            string input3 = "";
+            Console.WriteLine("please answer the following questions if youre eligible to vote. y= yes, n= no");
+            while (String.IsNullOrEmpty(input1))
+            {
+                Console.Write("Are you 18 years or older?");
+                input1 = Console.ReadLine();
+            }
+            while (String.IsNullOrEmpty(input2))
+            {
+                Console.Write("Are you a NZ citizin?");
+                input2 = Console.ReadLine();
+            }
+
+            while (String.IsNullOrEmpty(input3))
+
+            {
+                Console.Write("Have you lived here for 12 or more months?");
+                input3 = Console.ReadLine();
+            }
+            answer1 = Convert.ToChar(input1.ToLower());
+            answer2 = Convert.ToChar(input2.ToLower());
+            answer3 = Convert.ToChar(input3.ToLower());
+            if (answer1 == 'y' && answer2 == 'y' && answer3 == 'y')
+            {
+                Console.WriteLine("Youre eligible to vote!");
+            }
+            else
+            {
+                Console.WriteLine("Youre not eligible to vote");
+            }
+        }
+        static void CheckInput()
+        {
+            Console.Write("Please enter SR you would like to see: ");
+            input = Console.ReadLine();
+
+            switch (input)
+            {
+                case "7":
+                    SR7();
+                    break;
+                // default will run if no cases are true
+                default:
+                    Console.WriteLine("Invalid input");
+                    CheckInput();
+                    break;
+            }
+        }
+        static void ExitProgram()
+        {
+            Console.WriteLine("Press any key to exit");
+            Console.ReadKey();
+        }
+        static void Main(string[] args)
+        {
+            CheckInput();
+            ExitProgram();
+        }
+    }
+} 
