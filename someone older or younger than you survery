@@ -1,0 +1,22 @@
+int age1 = 0;
+int age2 = 0;
+
+Console.Write("Please enter your age: ");
+int.TryParse(Console.ReadLine(), out age1);
+
+Console.Write("Please enter someone else's age: ");
+int.TryParse(Console.ReadLine(), out age2);
+
+if (age1 > age2)
+{
+    Console.WriteLine("You are older");
+}
+else if (age1 < age2)
+{
+    Console.WriteLine("The other person is older");
+}
+else
+{
+    Console.WriteLine("You are the same age");
+
+    Console.ReadKey();
