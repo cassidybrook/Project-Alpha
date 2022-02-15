@@ -1,0 +1,7 @@
+Console.WriteLine("Cassidy Rating");
+Console.WriteLine("Confidence: 9");
+Console.WriteLine("Creativity: 10");
+Console.WriteLine("Resilience: 10");
+Console.WriteLine("Positivity: 10");
+Console.WriteLine("Hard Work: 10");
+Console.WriteLine("Love for Programming: 10");
