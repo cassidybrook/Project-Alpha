@@ -1,0 +1,29 @@
+Console.WriteLine("Name:");
+string userName = Console.ReadLine();
+Console.WriteLine("Username is: " + userName);
+Console.ReadKey();
+
+Console.WriteLine("Highschool:");
+string HS = Console.ReadLine();
+Console.WriteLine("Highschool is: " + HS);
+Console.ReadKey();
+
+Console.WriteLine("Techtorium ID:");
+string TD = Console.ReadLine();
+Console.WriteLine("Techtorium ID is: " + TD);
+Console.ReadKey();
+
+Console.WriteLine("Trainer Name:");
+string TN = Console.ReadLine();
+Console.WriteLine("Trainer Name is: " + TN);
+Console.ReadKey();
+
+Console.WriteLine("contact number:");
+string CN = Console.ReadLine();
+Console.WriteLine("Contact Number is: " + CN);
+Console.ReadKey();
+
+Console.WriteLine("hobbies:");
+string HOB = Console.ReadLine();
+Console.WriteLine("Hobbies is: " + HOB);
+Console.ReadKey();
