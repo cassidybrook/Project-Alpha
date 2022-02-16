@@ -1,0 +1,85 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SR11
+{
+    internal class Program
+    {
+        static void SR11()
+        {
+            int mark1 = 23;
+            int mark2 = 76;
+            int mark3 = 52;
+            string grade1 = GetGrade(mark1);
+            string grade2 = GetGrade(mark2);
+            string grade3 = GetGrade(mark3);
+            if (grade1 != null && grade2 != null && grade3 != null)
+            {
+                Console.WriteLine("Mark 1 = " + mark1 + "%, Grade 1 = " + grade1);
+                Console.WriteLine("Mark 2 = " + mark2 + "%, Grade 2 = " + grade2);
+                Console.WriteLine("Mark 3 = " + mark3 + "%, Grade 3 = " + grade3);
+            }
+        }
+
+        static string GetGrade(int mark)
+        {
+            string[] grades = { "Fail E", "Fail D", "C-", "C", "C+", "B-", "B", "B+", "A-", "A", "A+" };
+            if (mark < 40 && mark >= 0)
+            {
+                return grades[0];
+            }
+            if (mark >= 40 && mark < 50)
+            {
+                return grades[1];
+            }
+            if (mark >= 50 && mark < 55)
+            {
+                return grades[2];
+            }
+            if (mark >= 55 && mark < 60)
+            {
+                return grades[3];
+            }
+            if (mark >= 60 && mark < 65)
+            {
+                return grades[4];
+            }
+            if (mark >= 65 && mark < 70)
+            {
+                return grades[5];
+            }
+            if (mark >= 70 && mark < 75)
+            {
+                return grades[6];
+            }
+            if (mark >= 75 && mark < 80)
+            {
+                return grades[7];
+            }
+            if (mark >= 80 && mark < 85)
+            {
+                return grades[8];
+            }
+            if (mark >= 85 && mark < 90)
+            {
+                return grades[9];
+            }
+            if (mark >= 90 && mark < 101)
+            {
+                return grades[10];
+            }
+            return null;
+        }
+        static void Main(string[] args)
+        {
+            SR11();
+            Console.WriteLine("Press any key to close program");
+            Console.ReadKey();
+
+        }
+    }
+}
