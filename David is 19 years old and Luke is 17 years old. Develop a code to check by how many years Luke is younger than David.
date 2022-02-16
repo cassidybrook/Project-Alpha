@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace age_sr
+{
+    internal class Program
+    {
+        static void SR9()
+        {
+            int davidsAge = 19;
+            int lukesAge = 17;
+            int ageDifference = davidsAge - lukesAge;
+            Console.WriteLine("Luke is " + ageDifference + " years younger than David");
+        }
+        static void Main(string[] args)
+        {
+       
+            SR9();
+            Console.WriteLine("Press any key to close program");
+            Console.ReadKey();
+
+        }
+    }
+}
