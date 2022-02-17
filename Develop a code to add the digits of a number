@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace adding
+{
+    class Program
+    {
+        static void ExitProgram()
+        {
+            Console.WriteLine("Press any key to exit");
+            Console.ReadKey();
+        }
+        static void Main(string[] args)
+        {
+            int number = 456;
+            int sum = 0;
+            int i = 3;
+
+            while (i > 0)
+            {
+                sum += number % 10;
+                number /= 10;
+                i--;
+            }
+            Console.WriteLine("Sum of didgets is {0}", sum);
+            ExitProgram();
+        }
+    }
+}
